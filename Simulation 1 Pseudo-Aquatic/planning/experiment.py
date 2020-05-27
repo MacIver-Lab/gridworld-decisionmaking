@@ -39,7 +39,7 @@ class ExperimentParams:
     Accuracy = 0.01
     UndiscountedHorizon = 100
     AutoExploration = True
-    Depth = [1, 10, 100]
+    Depth = [1, 10, 100, 1000, 5000]
 
 
 class Experiment:
@@ -133,7 +133,7 @@ class Experiment:
 
     def DiscountedReturn(self, predatorHome, simulationDirectory, knowledge):
 
-        for visualRange in range(1, 2):
+        for visualRange in range(1, 6):
 
             summary = {'Depth 1': [],
                        'Depth 10': [],
@@ -151,7 +151,7 @@ class Experiment:
                     Path(directory).mkdir(parents=True, exist_ok=True)
 
 
-                for trial in range(ExperimentParams.MinDoubles, 1): #ExperimentParams.MaxDoubles
+                for trial in range(ExperimentParams.MinDoubles, ExperimentParams.MaxDoubles):
                     if depth == 5000:
                         episodeFile = directory + '/Episode_%d.csv' % (trial)
 

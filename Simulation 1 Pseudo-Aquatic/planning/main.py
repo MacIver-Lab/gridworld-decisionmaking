@@ -108,7 +108,7 @@ if __name__ == "__main__":
         print("Starting simulation...")
         planningDirectory = os.getcwd()
 
-        #UnitTests()
+        UnitTests()
 
         if not os.path.exists('init_vars.pkl'):
             predatorLocations = GetPredatorLocations()

@@ -30,7 +30,7 @@ class Game(Simulator):
         self.AgentHome = COORD(int(floor((xsize-1)/2)), 0)
         self.PredatorNum = 1
         self.PredatorHome = COORD(0, 0)
-        self.ChaseProbability = 0.7
+        self.ChaseProbability = 0.75
         self.MoveProbability = 0.5
         self.Discount = 0.95
         self.GoalPos = COORD(int(floor((xsize-1)/2)), ysize-1) #int(floor((xsize-1)/2))
